@@ -1,0 +1,48 @@
+@mixin set-background-color($bg-color) {
+    background-color: $bg-color; // #000
+    color: set-color($bg-color);
+}
+
+@mixin center-container {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin skills($bg-color, $margin-alignment) {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $bg-color;
+    width: 93%;
+    height: 120px;
+    margin: $margin-alignment;
+    z-index: 2;
+}
+
+@mixin position-label {
+    position: absolute;
+    font-size: 7.5rem;
+    opacity: 0.15;
+    top: 0;
+    left: 95px;
+    z-index: 1;
+}
+
+@mixin set-header {
+    position: relative;
+    width: 90%;
+    height: 180px;
+    margin-right: auto;
+}
+
+@mixin quick-access() {
+    display: flex;
+    justify-content: space-between;
+    @include center-container;
+    font-size: 12px;
+    color: $grey-color;
+}

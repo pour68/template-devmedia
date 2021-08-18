@@ -1,0 +1,25 @@
+.skill {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__icon i {
+        font-size: 3.5rem;
+        color: #696969;
+    }
+
+    &__img {
+        width: 55px;
+        filter: grayscale(100%);
+    }
+
+    &__title {
+        color: #696969;
+        font-size: 0.8rem;
+
+        &--light {
+            color: #fff;
+        }
+    }
+}

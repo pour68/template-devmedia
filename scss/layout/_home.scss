@@ -1,0 +1,206 @@
+.header {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.quickaccess {
+    @include quick-access();
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include center-container;
+    padding: 0.5rem 0;
+
+    &__link {
+        font-size: 0.9rem;
+        color: $link-color;
+        text-decoration: none;
+        margin-left: 1.25rem;
+
+        &:hover {
+            color: $black-color;
+        }
+    }
+
+    &__link.active {
+        color: $black-color;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        max-width: 256px;
+    }
+
+    &__brandtext {
+        font-family: 'Poppins', sans-serif;
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 35px;
+        opacity: 0.75;
+    }
+}
+
+.hero {
+    padding: 2.5rem 1rem;
+    position: relative;
+
+    &::before {
+        content: "DevMedia";
+        position: absolute;
+        top: -65px;
+        left: 35%;
+        font-size: 11rem;
+        color: $secondary-color;
+        z-index: -1;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 40px;
+        left: 35%;
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+        background-color: $secondary-color;
+        z-index: -1;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        @include center-container;
+    }
+
+    &__header {
+        flex-basis: 50%;
+        align-self: center;
+    }
+
+    &__header > span {
+        color: #666;
+        font-size: 1rem;
+    }
+
+    &__headercontent h3 {
+        font-size: 1.5rem;
+        margin: 0.5rem;
+    }
+
+    &__imgs {
+        flex-basis: 50%;
+    }
+
+    &__imgcontent {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 400px;
+        margin-right: auto;
+    }
+
+    &__img {
+        height: 100%;
+        max-height: 425px;
+    }
+
+    &__img:nth-child(odd) {
+        margin-top: 25px;
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+
+    &__btn > span {
+        display: inline-block;
+        margin-left: 1.5rem;
+    }
+
+    &__btn--dark {
+        @include set-background-color($dark-color);
+    }
+}
+
+.mouse__container img {
+    display: block;
+    margin: 0 auto;
+    width: 48px;
+}
+
+.frontend {
+    &__header {
+        @include set-header();
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__label {
+        @include position-label();
+    }
+
+    &__skills {
+        @include skills($white-color, $margin-right-auto);
+    }
+}
+
+.backend {
+    &__header {
+       @include set-header();
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__label {
+        @include position-label();
+    }
+
+    &__skills {
+        @include skills($dark-color, $margin-left-auto);
+    }
+}
+
+.tools {
+    &__header {
+        @include set-header();
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__label {
+        @include position-label();
+    }
+
+    &__skills {
+        @include skills($white-color, $margin-right-auto);
+    }
+}
+
+.footer {
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+    @include quick-access();
+}

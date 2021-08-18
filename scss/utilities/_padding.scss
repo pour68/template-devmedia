@@ -1,0 +1,27 @@
+@each $space in $spaces {
+    .pt-#{$space} {
+        padding-top: #{$space / 2}rem;
+    }
+
+    .pr-#{$space} {
+        padding-right: #{$space / 2}rem;
+    }
+
+    .pb-#{$space} {
+        padding-bottom: #{$space / 2}rem;
+    }
+
+    .pl-#{$space} {
+        padding-left: #{$space / 2}rem;
+    }
+
+    .py-#{$space} {
+        padding-top: #{$space / 2}rem;
+        padding-bottom: #{$space / 2}rem;
+    }
+
+    .px-#{$space} {
+        padding-left: #{$space / 2}rem;
+        padding-right: #{$space / 2}rem;
+    }
+}

@@ -1,0 +1,27 @@
+@each $space in $spaces {
+    .mt-#{$space} {
+        margin-top: #{$space / 2}rem;
+    }
+
+    .mr-#{$space} {
+        margin-right: #{$space / 2}rem;
+    }
+
+    .mb-#{$space} {
+        margin-bottom: #{$space / 2}rem;
+    }
+
+    .ml-#{$space} {
+        margin-left: #{$space / 2}rem;
+    }
+
+    .my-#{$space} {
+        margin-top: #{$space / 2}rem;
+        margin-bottom: #{$space / 2}rem;
+    }
+
+    .mx-#{$space} {
+        margin-left: #{$space / 2}rem;
+        margin-right: #{$space / 2}rem;
+    }
+}
